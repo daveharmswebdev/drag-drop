@@ -1,0 +1,27 @@
+<div class="example-container">
+  <h2>Make the Avengers</h2>
+
+  <div
+    cdkDropList
+    #unaffilatedList="cdkDropList"
+    [cdkDropListData]="unaffiliated"
+    [cdkDropListConnectedTo]="[avengersList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <mat-card class="example-box" *ngFor="let item of unaffiliated" cdkDrag>{{item}}</mat-card>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+    #avengersList="cdkDropList"
+    [cdkDropListData]="avengers"
+    [cdkDropListConnectedTo]="[unaffilatedList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <mat-card class="example-box" *ngFor="let item of avengers" cdkDrag>{{item}}</mat-card>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.boundary {
+  border: 1px dashed gray;
+  height: 600px;
+  width: 1200px;
+  .draggable-box {
+    background-color: aqua;
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+  }
+}
